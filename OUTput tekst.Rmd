@@ -1,0 +1,146 @@
+---
+title: "Zadar - poluotok - Ivanov dio"
+author: "*"
+date: "3. veljače 2016."
+output: word_document
+---
+
+## napomene za uvod
+definirati prostor poluotoka
+
+## opće interne napomene
+dvojezični grafovi i tablice
+PRIMJER NASLOVA GRAFA:
+Slika XX. Odnos vikendica i stalno nastanjenih stanova u Dubravi 2001. po statističkim krugovima
+Izvor: Popis stanovništva, kućanstava i stanova 2001., posebno obrađene tablice
+Figure XX Relationship between second homes and permanently inhabited dwellings in Dubrava in 2001 by statistical districts
+Source: Census of Population, Households and Dwellings in 2001, specially processed tables
+
+
+
+# Metodologija
+
+## Izvor podataka
+
+Podaci prikazani u radu temelje se na Popisima stanovništva 2001. i 2011. godine. Neposredni izvor podataka su od Državnog zavoda za statistiku posebno zatražene i obrađene tablice koje, osim na razini općina i naselja, podatke iskazuju i na razini statističkih krugova (u daljnjem tekstu SK). Valja napomenuti da isporučene tablice sadrže neobrađene podatke te da su svi indikatori koji se navode u radu posebno izračunati.
+
+Podaci za administrativnu jedinicu Grad Zadar obuhvaćaju sljedeća naselja:
+* otočna naselja: Ist, Mali Iž, Veli Iž, Rava, Molat, Brgulje, Zapuntel, Olib, Premuda, Silba
+* kopnena naselja: Babindub, Crno, Kožino, Petrčane
+* naselje Zadar
+
+Naselje Zadar obuhvaća 95.2% stanovnika Grada Zadra. U daljnjem tekstu, u svim analizama i prikazima, riječ Zadar odnosi se na uži pojam, dakle na naselje Zadar. Proširenu povijesnu jezgru Zadra definiramo prema granicama mjesnog odbora Poluotok, obuhvaćanjem odgovarajućih deset statističkih krugova u analizama (prikaz na slici XX)
+
+Prosječna veličina SK u Zadru iznosi 1743 stanovnika, dok prosječna veličina SK na poluotoku iznosi 393 stanovnika, u rasponu od 121 do 1350 stanovnika. Prednost je relativno malih (i površinom i brojem stanovnika) SK na poluotoku što omogućuju izuzetno preciznu prostornu analizu procesa na tom području. Nedostatak je taj što su indikatori računati na razini pojedinih SK, zbog malog broja stanovnika, vrlo osjetljivi i na relativno male promjene. Kod navođenja rezultata smo stoga uvijek uzimali u obzir i veličinu SK, te smo relativne promjene uvijek barem implicitno "ponderirali" i veličinom SK, kako ekstremni rezultati koji su se često pojavljivali u malim SK ne bi dominirali nad relativno manjim, ali u apsolutnom smislu važnijim promjenama koje su se u našim analizama istakle u većim SK*
+
+> za sličan pristup problemu malih jedinica analize usp. Crljenko 2013)
+
+
+## Pitanja-popisnica (instrumenti)
+
+Neposredni uvid u sadržajnu valjanost prikupljenih podataka može se steći na temelju osnovnih popisnih obrazaca (P-1 -- popisnica te P-2 -- upitnik za kućanstvo i stan) te u dokumentu "Metodološka objašnjenja", dostupnih na internetskim stranicama Državnog zavoda za statistiku. Za usporedivost izloženih podataka ključna je promjena definicije stanovnika koja je napravljena između Popisa 2001. i 2011. g. U popisu 2011. primijenjen je (jednako kao i u popisu 2001.) koncept  ”uobičajenog mjesta stanovanja”, ali se prvi put uvodi namjera odsutnosti/prisutnosti kao dodatni kriterij za uključivanje osoba u ukupno stanovništvo ili isključivanje iz njega (DZS, Metodološka objašnjenja 2011). Prema Nejašmiću i Toskiću (2013, str. 104): "Razlike u metodologiji  'administrativno' utječu na usporedivost podataka, ali se može reći da utjecaj na strukturna obilježja nije tolik kao u slučaju promjene broja stanovnika". Iz tog se razloga usporedba broja stanovnika prikazuje bez izvođenja zaključaka. Zaključci koji se izvode na temelju analize promjena strukturnih obilježja oslanjaju se na njihovu relativnu stabilnost te ih smatramo u potpunosti valjanima.
+
+
+## STARENJE
+
+###opća napomena
+zbog dostupnosti podataka, u tekstu koristimo 5-godišnje dobne skupine
+
+### medijalna dob
+dijeli populaciju na dva jednaka dijela prema dobi ili dobnoj skupini; najčešće korišten pokazatelj
+The second class of indicators of population aging include the standard statistical measures of location: the median, mean, and modal ages of the population. The median age—the age at which exactly half the population is older and half younger— is the most widely used indicator. For the year 2000 the median age in the United States was 36 years, a typical value for most developed countries. The median age for Africa was 18 years.
+
+### indeks starosti
+Indeks starosti (još nazivan i indeksom starenja) je broj osoba "starije" dobi iskazan na sto osoba "mlade" dobi. No kod određivanja statističkih granica mlade i starije dobi ne postoji konsenzus, pa različiti autori i institucije koriste različite granice kojima formiraju međusobno neusporedive indekse istog naziva. Slijedeći preporuku Nejašmića i Toskića (2013, str. 104), ali uzimajući u obzir i druge uobičajene definicije (usp. Encyclopedia of Population), indeks starosti konstruirali smo kao omjer broja stanovnika u dobi od 65 i više godina i broja stanovnika mlađih od 15 godina. Ovako konstruiran indeks ima dodatnu prednost da je, na razini Hrvatske, u međupopisnom razdoblju 2001-2011 g. vrijednost indeksa prešla granicu od 100, tj. broj starijih od 65 godina je premašio broj mlađih od 15 godina.
+
+
+
+## OBRAZOVANJE
+
+### indeks obrazovanosti
+
+Indeks obrazovanosti (Nejašmić 2005, str. ) je omjer između umnoška udjela stanovništva sa sekundarnim i tercijarnim obrazovanjem te udjela stanovništva s nezavršenim primarnim obrazovanjem:
+Io = I2 * I3 / I < 1
+
+HR(2011) = 90,5  ;
+
+Prednost je indeksa što uzima u obzir sve velike skupine školske spreme, no nedostatak mu je velika varijabilnost (različite skupine stanovništva mogu imati višestruko više/niže vrijednosti indeksa) i interakcija među svim udjelima koji sudjeluju u izračunu što promjene čini teško usporedivima. Iz tog razloga koristimo i jednostavni indikator, a to je udio tercijarno obrazovanih u ukupnom stanovništvu. Osim interpretabilnosti, ovaj pokazatelj čini privlačnim i to što se koristi u strateškim smjernicama razvoja Europske unije "Europe 2020"" - primjerice, povećanje broja osoba sa završenim tercijarnim obrazovanjem na 40% u dobnoj skupini od 30 do 34 godine (Marcelić, 2015: 313)
+
+
+## MIGRACIJE
+
+## AKTIVNOST I ZAPOSLENOST
+
+v. EoP -> Labor force
+Aktivnost = Aktivno sudjelovanje u procesu rada, pri čemu razlikujemo osnovne dvije aktivne skupine - zaposlene i nezaposlene (za detaljniju klasifikaciju v. Campbell, C. R., Brue, S.L., 1992, str. 52-54 PREMA Obadić, Smolić 2007).
+* STOPA AKTIVNOSTI = aktivni (zaposleni i nezaposleni) / populacija 15-64
+* STOPA ZAPOSLENOSTI = zaposleni / populacija 15-64
+Voditi računa o kritičnom trenutku popisa (31. 3.), s obzirom na sezonalnost zapošljavanja u Hrvatskoj, posebno izraženu u uzobalnom dijelu. S obzirom na to, ovdje izražena stopa zaposlenosti predstavlja konzervativnu procjenu jer je kraj ožujka vrijeme najniže godišnje zaposlenosti u Hrvatskoj (Marcelić XXX)
+
+
+## stanovi
+
+
+
+## Analiza podataka
+- korištene metode
+- softver, dostupnost koda
+
+
+
+# Rezultati
+
+
+## Promjene broja stanovnika na zadarskom poluotoku i u gradu Zadru
+tablica 1 + graf 1 (mapa)
+
+* prostorna i vremenska dimenzija usporedbe - unatoč nemogućnosti direktne usporedbe dvaju popisa na istom prostoru zbog promjene definicije, moguće je zaključke donositi komparativno promatrajući obrasce promjena u prostoru. Uvjet je za ovo plauzibilna pretpostavka da se promjene definicije stanovnika korištena u popisu 2011. podjednako odrazile na cijelom području Zadra. Promjene na cijelom području Zadra i izdvojenim poluotokom su prikazane kartogramom (slika 1), a detaljne promjene na poluotoku tablicom 1.
+
+* Kartogram relativne promjene broja stanovnika ukazuje na velike razlike na području poluotoka i ostatka Zadra. Poluotok je 2001. godine imao 5358 stanovnika, a 2011. godine 3928 stanovnika. U relativnom iznosu, broj stanovnika se na poluotoku u desetgodišnjem razdoblju smanjio za ???-26.3%.  Pad broja stanovnika se dogodio u svim SK na poluotoku, u rasponu od -12% do -35.7%. Slično primjećujemo i u svim susjednim statističkim krugovima, kao i u svim statističkim krugovima koji su većim dijelom na obali, ali je gubitak stanovnika na tom području manje izražen nego u jezgri/poluotoku. Rast broja stanovnika na području Zadra ostvaren je zbog naglog porasta broja stanovnika u rubnim??? područjima grada, primjerice porastom od gotovo 40% u SK koji obuhvaća Bokanjac???, koji su kompenzirali gubitak stanovništva u jezgri/poluotoku.
+
+## dobna struktura
+tablica 2
+
+Prikaz promjene dobne strukture (tablica 2) ukazuje na izraženo starenje, koje je ravnomjerno raspoređeno po cijelom poluotoku. Dominantna je pojava pomicanje medijalne dobi za jednu 5-godišnju starosnu skupinu, iz one 40-44 u skupinu 45-49.  Starenje na poluotoku potvrđuje i indeks starosti, koji je za područje poluotoka porastao s vrijednosti 139.9 na 219.9 -- drugim riječima, na 100 mladih (ispod 15 g.) stanovnika je 2001. g. dolazilo oko 140 starih, a 2011. g. gotovo 220 starih (65 i više godina). 
+Na području cijelog Zadra također dolazi do starenja stanovništva, ali je ono bitno manje izraženo. To se očituje u nepromijenjenoj medijalnoj dobi, ali i u relativno blagom porastu indeksa starosti. U razdoblju od 2001. do 2011. godine u Zadru je indeks starosti prešao granicu od 100 bodova, što znači da je broj starih premašio broj mladih -- 2001. g. je na 100 mladih bilo oko 77 starih, a 2011. g. oko 105 starih.
+
+## obrazovna struktura
+tablica 3 + graf 2 (mapa)
+
+Dok su pokazatelji kretanja broja stanovnika i starenja uglavnom negativni, kretanje indikatora obrazovne strukture u međupopisnom je razdoblju pozitivno (v. tablicu 3). Promjena indeksa obrazovanosti ukazuje na ravnomjerni porast broja srednje- i visokoobrazovanih u usporedbi sa stanovnicima koji nisu završili primarno obrazovanje. Taj je omjer u prvom analiziranom popisu na poluotoku iznosio 1.20, a na području cijelog Zadra je iznosio točno 1, što znači da je umnožak broja srednje i visokobrazovanih bio točno jednak broju onih koji nisu završili osnovnu školu. U međupopisnom je razdoblju indeks porastao na 2.89 za poluotok, odnosno 2.28 za Zadar.
+Dodatnu informaciju pruža udio tercijarno obrazovanih, koji se također ravnomjerno podiže na poluotoku i u Zadru, uz vrlo sličnu stopu rasta. Porast je izražen na cijelom području poluotoka, uz manje prostorne varijacije koje su često vezane uz veličinu statističkih krugova (svi podaci se nalaze u tablici 3). Manji statistički krugovi su u ovakvim analizama oni u kojima se obično iskazuju najveće promjene -- u ovom je slučaju najveća promjena u SK 135534 od 210 stanovnika, dok je u najvećim SK porast iznosio oko 20% (???ne brkati s oko 3.5 postotnih bodova)
+
+## migracije
+tablica 4 + graf 3 (struktura 2011)
+
+## aktivnost i zaposlenost
+tablica 5 + graf 4 (struktura aktivnosti 2011) + graf 5 (mapa zaposlenost)
+
+## stanovi
+
+
+# Rasprava i zaključak
+
+### ključni nalazi
+
+
+### kontekstualizacija
+* Popis će se provesti u razdoblju od 1. do 28. travnja 2011., prema stanju na dan 31. ožujka 2011. u 24 sata, što se smatra kritičnim trenutkom Popisa.
+* indeks starosti (za HR) izračunat iz broja starih 65 i više godina prema skupini 0 – 14 iznosi 116,3, a 2001. bio je 91,9.
+
+* Zadar je jedini??? veliki uzobalni grad koji je u promatranom razdoblju doživio/ostvario porast broja stanovnika -- stopa relativne promjene broja stanovnika iznosi 5.7%
+
+* pad broja stanovnika u PJ Splita ukazuje na sličan proces, iako i tu promjenu možemo relativizirati promjenom definicije stanovnika. Tek će sljedeći popis stanovništva (ukoliko se definicija ne bude mijenjala) pružiti podlogu za donošenje zaključaka o rastu ili padu broja stanovnika.
+
+* Zadarska županija bilježi drugu najveću promjenu u bodovnoj vrijednosti koja uzima u obzir odnos između starog i mladog stanovništva(2001: 73,5 -› 2011: 66,0) - by Nejašmić i Toskić 2013 - . Naša analiza upućuje na oprez kod ovakvih zaključaka - starenje je na poluotoku vrlo intenzivno, no na razini ostatka grada nije primjetno.
+
+* Promjena u obrazovnoj strukturi ukazuje na istovremeno opadanje broja ispod-primarno obrazovanih (prvenstveno rezultat starenja) i porast broja tercijarno obrazovanih, što ukazuje na mogućnost razvoja utemeljenog na znanju (Europe 2020...)
+
+### zaključak
+
+# Literatura
+
+# Izvori
+
+
+
