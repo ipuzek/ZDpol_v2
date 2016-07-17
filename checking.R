@@ -1,6 +1,7 @@
 ### DZS CHECKING ###
 
-library(dplyr)
+source("/IvanP/R/pocetni.R")
+source("/IvanP/!Istrazivanja/done and done/Zadar_DZS/code.ZDpol/wrangling.R", encoding = 'UTF-8')
 
 ### provjera: jesu li zbrojevi varijabli jednaki 
 # ukupnom broju stanovnika brojstan__ukupno
