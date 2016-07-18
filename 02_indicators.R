@@ -1,7 +1,7 @@
 ### osnovni indikatori ###
 
 source("/IvanP/R/pocetni.R")
-source("/IvanP/!Istrazivanja/done and done/Zadar_DZS/code.ZDpol/wrangling.R", encoding = 'UTF-8')
+source("/IvanP/!Istrazivanja/done and done/Zadar_DZS/code.ZDpol_v2/01_wrangling.R", encoding = 'UTF-8')
 
 # uz svaki pokazatelj iskazati i prosječnu promjenu na cijelom području (poluotoku, Zadru)
 
