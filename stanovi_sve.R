@@ -1,15 +1,17 @@
 ### DZS stanovi
 
-library(tidyr); library(dplyr); library(readxl); library(ggplot2); library(gridExtra)
+library(tidyr); library(dplyr)
+library(ggplot2); library(gridExtra)
 
-#setwd("/IvanP/!Istrazivanja/Zadar_DZS/")
-#setwd("~/R/ZDpol/")
+setwd("/IvanP/!Istrazivanja/done and done/Zadar_DZS/")
 
+
+# WRANGLING ---------------------------------------------------------------
 
 ### stanovi podaci ###
 
-stanovi2001 <- read_excel("data/stanovi.xlsx", sheet = 1, na = ".")
-stanovi2011 <- read_excel("data/stanovi.xlsx", sheet = 2, na = ".")
+stanovi2001 <- readxl::read_excel("data/stanovi.xlsx", sheet = 1, na = ".")
+stanovi2011 <- readxl::read_excel("data/stanovi.xlsx", sheet = 2, na = ".")
 
 # filter = ZD.dijelovi
 
@@ -24,32 +26,7 @@ stanovi2011$ZD.dijelovi <- "non_ZD"
 stanovi2011$ZD.dijelovi[stanovi2011$SK %in% ZD_pol] <- "poluotok"
 stanovi2011$ZD.dijelovi[stanovi2011$SK %in% ZD_nonpol] <- "non_poluotok"
 
-
-# explore 2001
-
-stanovi2001.plot <- stanovi2001 %>%
-  filter(ZD.dijelovi == "poluotok" | ZD.dijelovi == "non_poluotok") %>%
-  gather(key = stan, value = frek, samo_stanovanje : ostale_djelatnosti) %>%
-  group_by(ZD.dijelovi, stan) %>%
-  summarise(brojstan = sum(frek, na.rm = TRUE))
-
-stanovi2001.plot %>%
-  ggplot(aes(x = ZD.dijelovi, y = brojstan, fill = stan)) +
-  geom_bar(stat = "identity", position = "fill")
-
-# explore 2011
-
-stanovi2011.plot <- stanovi2011 %>%
-  filter(ZD.dijelovi == "poluotok" | ZD.dijelovi == "non_poluotok") %>%
-  gather(key = stan, value = frek, samo_stanovanje : ostale_djelatnosti) %>%
-  group_by(ZD.dijelovi, stan) %>%
-  summarise(brojstan = sum(frek, na.rm = TRUE))
-
-stanovi2011.plot %>%
-  ggplot(aes(x = ZD.dijelovi, y = brojstan, fill = stan)) +
-  geom_bar(stat = "identity", position = "fill")
-
-###
+#
 
 stanovi2001$godina <- 2001
 stanovi2011$godina <- 2011
@@ -58,7 +35,7 @@ stanovi2011$godina <- 2011
 
 stanovi_df <- rbind(stanovi2001, stanovi2011)
 stanovi_df <- gather(stanovi_df, key = stan, value = frek, samo_stanovanje : ostale_djelatnosti) %>%
-    filter(ZD.dijelovi == "poluotok" | ZD.dijelovi == "non_poluotok")
+  filter(ZD.dijelovi == "poluotok" | ZD.dijelovi == "non_poluotok")
 
 stanovi_df$stan[stanovi_df$stan == "sezonski_radovi_poljoprivreda"] <- NA
 stanovi_df$stan <- factor(stanovi_df$stan, levels = c(
@@ -84,7 +61,7 @@ stanovi_df_wide <- data.frame(rename(stanovi2001, id = SK),
                                        odmor_rekreacija.2011 = odmor_rekreacija,
                                        iznajmljivanje_turistima.2011 = iznajmljivanje_turistima, 
                                        ostale_djelatnosti.2011 = ostale_djelatnosti)
-                                )
+)
 stanovi_df_wide <- stanovi_df_wide %>%
   mutate(stanovanje = samo_stanovanje.2011 - samo_stanovanje) %>%
   mutate(privremeno_nenast = privremeno_nenastanjen.2011 - privremeno_nenastanjen) %>%
@@ -95,6 +72,37 @@ stanovi_df_wide$broj_stanova.2011 <- stanovi_df_wide %>%
   select(samo_stanovanje.2011 : ostale_djelatnosti.2011) %>%
   rowSums(na.rm = TRUE)
 
+
+# EXPLORING ---------------------------------------------------------------
+# 
+# # explore 2001
+# 
+# stanovi2001.plot <- stanovi2001 %>%
+#   filter(ZD.dijelovi == "poluotok" | ZD.dijelovi == "non_poluotok") %>%
+#   gather(key = stan, value = frek, samo_stanovanje : ostale_djelatnosti) %>%
+#   group_by(ZD.dijelovi, stan) %>%
+#   summarise(brojstan = sum(frek, na.rm = TRUE))
+# 
+# stanovi2001.plot %>%
+#   ggplot(aes(x = ZD.dijelovi, y = brojstan, fill = stan)) +
+#   geom_bar(stat = "identity", position = "fill")
+# 
+# # explore 2011
+# 
+# stanovi2011.plot <- stanovi2011 %>%
+#   filter(ZD.dijelovi == "poluotok" | ZD.dijelovi == "non_poluotok") %>%
+#   gather(key = stan, value = frek, samo_stanovanje : ostale_djelatnosti) %>%
+#   group_by(ZD.dijelovi, stan) %>%
+#   summarise(brojstan = sum(frek, na.rm = TRUE))
+# 
+# stanovi2011.plot %>%
+#   ggplot(aes(x = ZD.dijelovi, y = brojstan, fill = stan)) +
+#   geom_bar(stat = "identity", position = "fill")
+# 
+# ###
+
+
+# PLOTTING stupci ---------------------------------------------------------
 
 # poluotok
 
@@ -162,6 +170,7 @@ ggstan2 <- stanoviZD.plot %>%
                     type = "qual", palette = 3) +
   labs(x = "Godina / Year - Zadar(except Poluotok)", y = "Number of apartments / Broj stanova")
 
+setwd("/IvanP/!Istrazivanja/done and done/Zadar_DZS/output/novo_lipanj_2016")
 grid.arrange(ggstan1, ggstan2, nrow = 1)
 
 
@@ -235,6 +244,17 @@ mrm4 <- ggplot(data = ZDpol.stanovi, aes(x = long, y = lat)) +
   theme_nothing(legend = TRUE) +
   ggtitle("Ostale djelatnosti /\nOther activities")
 
-grid.arrange(mrm1, mrm2, mrm3, mrm4)
+setwd("/IvanP/!Istrazivanja/done and done/Zadar_DZS/output/novo_lipanj_2016")
+
+ggsave("SL5_1__stanovi_stanovanje__v3.pdf", mrm1, device = "pdf", 
+       width = .9*170-5, height = .9*148, units = "mm")
+ggsave("SL5_2__stanovi_privremeno__v3.pdf", mrm2, device = "pdf", 
+       width = .9*170-5, height = .9*148, units = "mm")
+ggsave("SL5_3__stanovi_napusteni__v3.pdf", mrm3, device = "pdf", 
+       width = .9*170-5, height = .9*148, units = "mm")
+ggsave("SL5_4__stanovi_ostale__v3.pdf", mrm4, device = "pdf", 
+       width = .9*170-5, height = .9*148, units = "mm")
+
+# grid.arrange(mrm1, mrm2, mrm3, mrm4)
 
 
